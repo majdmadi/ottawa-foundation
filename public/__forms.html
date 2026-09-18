@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form declarations</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!--
+      Netlify's build-time form scanner only parses static HTML, not React
+      output. These forms exist purely so Netlify registers the field names.
+      Nobody visits this page — components/QuoteForm.jsx POSTs here as
+      multipart/form-data. Keep the field names in sync with that component.
+    -->
+    <form name="quote" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="form-name" value="quote" />
+      <input name="bot-field" />
+      <input name="service" />
+      <input name="property" />
+      <textarea name="message"></textarea>
+      <input type="file" name="photo1" />
+      <input type="file" name="photo2" />
+      <input type="file" name="photo3" />
+      <input name="address" />
+      <input name="city" />
+      <input name="urgency" />
+      <input name="name" />
+      <input name="phone" />
+      <input name="email" />
+      <input name="contact_pref" />
+      <input name="heard" />
+      <input name="consent" />
+    </form>
+
+    <form name="booking" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="form-name" value="booking" />
+      <input name="bot-field" />
+      <input name="service" />
+      <input name="property" />
+      <textarea name="message"></textarea>
+      <input type="file" name="photo1" />
+      <input type="file" name="photo2" />
+      <input type="file" name="photo3" />
+      <input name="address" />
+      <input name="city" />
+      <input name="urgency" />
+      <input name="preferred_date" />
+      <input name="preferred_time" />
+      <input name="name" />
+      <input name="phone" />
+      <input name="email" />
+      <input name="contact_pref" />
+      <input name="heard" />
+      <input name="consent" />
+    </form>
+  </body>
+</html>

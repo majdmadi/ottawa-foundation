@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+.netlify
+
+# Full-size AI photo originals (web copies live in public/photos)
+_photo-originals
+
+# Local working folders — not part of the site
+_to_delete
+Claude outputs
