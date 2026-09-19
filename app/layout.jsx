@@ -43,7 +43,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en-CA" className={`${sans.variable} ${display.variable}`}>
-      <body className="flex min-h-screen flex-col pb-[60px] lg:pb-0">
+      <body className="flex min-h-screen flex-col pb-14 lg:pb-0">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-amber focus:px-4 focus:py-2 focus:font-semibold focus:text-ink-950"
