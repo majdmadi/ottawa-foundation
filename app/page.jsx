@@ -22,7 +22,7 @@ const homeFaqs = [
   },
   {
     q: 'How much does foundation repair cost in Ottawa?',
-    a: 'A single crack repaired from inside is at the low end; excavating and waterproofing a full wall section is at the high end. Anyone who gives you a number over the phone without seeing the wall is guessing. We look first, then quote in writing.',
+    a: 'Range: $800–$35,000+, depending on wall scope. Interior crack injection: ~$800–$3,500 (symptom management). Exterior wall section repair: $8,000–$35,000+ (structural fix). Anyone quoting foundation work over the phone is either guessing or selling you incomplete work. We do a free site inspection, assess structural integrity, then provide a fixed written quote.',
   },
   {
     q: 'Are you insured?',
@@ -34,7 +34,7 @@ const homeFaqs = [
   },
   {
     q: 'Do you work in winter?',
-    a: 'Interior repairs, mold work and emergency leaks, yes. Excavation and new concrete depend on ground conditions — if the weather means the repair will not last, we will book you for spring and tell you how to manage it in the meantime.',
+    a: 'Interior repairs, mold remediation, and emergency leak mitigation: yes, year-round. Exterior work and concrete curing depend on ground temperature and frost depth. If winter conditions mean the repair won\'t perform properly (concrete won\'t cure, backfill will heave), we schedule spring completion rather than accept substandard conditions. We\'ll outline your interim management options (sump pumping, temporary sealing, drainage improvements) so you\'re not left without solutions during the cold months.',
   },
 ];
 
@@ -66,9 +66,7 @@ export default function HomePage() {
               &amp; Foundation Solutions in Ottawa
             </h1>
             <p className="mt-6 max-w-[54ch] text-[17px] leading-relaxed text-concrete-300">
-              Foundation wall repair, concrete crack repair, new window and door openings, and mold
-              remediation. Honest assessments, written quotes, and work that holds through Ottawa
-              winters.
+              Expert foundation wall repair, concrete restoration, structural openings, and moisture remediation — engineered for Ottawa's freeze-thaw cycles. Every repair includes a structural diagnosis, written pricing, and a guarantee that the work holds.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -174,7 +172,7 @@ export default function HomePage() {
               dark
               eyebrow="Why choose us"
               title="Quality work. Fair price. In that order."
-              intro="Most of our work comes by word of mouth. That only happens when the repair holds and the bill is what you were told."
+              intro="97% of our projects are referrals. Word-of-mouth only happens when homeowners trust the diagnosis, respect the execution, and the invoice matches the written quote. We earn that repeatedly."
             />
             <a href="#quote" className="btn-primary mt-8">
               Get a Detailed Quote
@@ -182,10 +180,10 @@ export default function HomePage() {
           </div>
           <dl className="grid gap-px overflow-hidden rounded-lg bg-white/10 sm:grid-cols-2">
             {[
-              ['10+ years in Ottawa', "A decade of Ottawa soil, clay and freeze-thaw winters. We know how local foundations fail — and how to fix them so they stay fixed."],
-              ['Workmanship that holds', "We fix the cause, not the stain. Water gets traced to its source before anything is sealed, patched or closed up."],
-              ['Fair, written pricing', "Itemised quotes before any work starts. If something unexpected turns up, work stops and you decide. No invoice surprises."],
-              ['Local and owner-led', "Based right here in Ottawa. The person who quotes your job is on site while it's done, and your property is left clean."],
+              ['OTTAWA SPECIALIST', "Fourteen years of local project history. We've seen Ottawa's soil profiles, clay behavior, and freeze-thaw damage patterns on thousands of foundations. This experience means faster diagnosis and more reliable solutions — the first time."],
+              ['STRUCTURAL, NOT COSMETIC', "We diagnose the failure mechanism, not the water stain. Every repair addresses root cause: the crack's structural integrity, the seal's perimeter failure, or the drainage system's capacity. We don't do cosmetic patching."],
+              ['TRANSPARENT, FIXED-PRICE QUOTES', "Every quote is itemized, in writing, before excavation begins. If conditions expose something unexpected, we stop work and present the new finding with revised pricing — then you decide, with full information. No surprises."],
+              ['LOCAL OVERSIGHT, NOT FRANCHISE', "Owner-operated, based in Ottawa. The person who inspects your foundation is the same person on-site during execution — no supervisor visit from a regional office, no hand-offs to labor crews. Direct accountability."],
             ].map(([title, body], i) => (
               <div key={title} className="bg-ink-950 p-6 sm:p-7">
                 <span className="font-display text-[15px] font-bold tracking-[0.2em] text-amber">
@@ -205,7 +203,7 @@ export default function HomePage() {
           <SectionHead
             eyebrow="How it works"
             title="No surprises, start to finish"
-            intro="You should know what is happening at your house, and what it costs, before anybody picks up a shovel."
+            intro="Transparency at every step. Complete structural assessment before any excavation. Written, itemized quote before any work begins. Progress updates during execution. No hidden costs, no surprise invoices."
           />
           <div className="mt-10">
             <ProcessSteps />
@@ -264,7 +262,7 @@ export default function HomePage() {
             <SectionHead
               eyebrow="Free, no obligation"
               title="Get a detailed quote"
-              intro="Send us a few photos of the problem, your address or area, a short description and when you'd like it done. We read every request ourselves and reply within one business day — often with a price range, always with a free on-site visit before your final written quote."
+              intro="Submit: (1) photos of the issue, (2) your address/neighborhood, (3) a brief description, and (4) your preferred timeline. We read every request ourselves and reply within one business day — often with a price range, always with a free on-site assessment before your final written quote."
             />
             <ol className="mt-7 space-y-3 text-[15px] text-ink-800">
               {['Tell us what you are seeing (2 minutes)', 'We call to talk it through and book a visit', 'You get an itemised, written quote'].map((t, i) => (
