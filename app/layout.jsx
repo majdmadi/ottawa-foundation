@@ -6,6 +6,7 @@ import MobileCallBar from '@/components/MobileCallBar';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { site } from '@/lib/site';
 import { localBusinessJsonLd, JsonLd } from '@/lib/seo';
+import Analytics from '@/components/Analytics';
 
 const sans = Inter({
   subsets: ['latin'],
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
         <MobileCallBar />
         <WhatsAppButton />
         <JsonLd data={localBusinessJsonLd()} />
+        <Analytics />
       </body>
     </html>
   );

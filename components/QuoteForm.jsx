@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { services } from '@/lib/services';
 import { site } from '@/lib/site';
+import { trackEvent } from '@/components/Analytics';
 
 /**
  * Three-step quote / booking request.
@@ -79,6 +80,10 @@ export default function QuoteForm({ variant = 'quote', className = '' }) {
     try {
       const res = await fetch('/__forms.html', { method: 'POST', body: data });
       if (!res.ok) throw new Error(String(res.status));
+      trackEvent('generate_lead', {
+        form_name: 'quote_request',
+        service: data.get('service') || 'unspecified',
+      });
       form.reset();
       setStep(0);
       setStatus('sent');
