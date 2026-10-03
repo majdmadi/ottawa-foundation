@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.menuName} in Ottawa`,
     description: service.summary,
+    alternates: { canonical: `/services/${service.slug}` },
   };
 }
 
@@ -43,7 +44,7 @@ export default async function ServicePage({ params }) {
             </nav>
             <h1 className="h1 text-white">{service.menuName}</h1>
             <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-amber">{service.hero}</p>
-            <p className="mt-4 max-w-prose text-[16px] leading-relaxed text-concrete-400">
+            <p className="mt-4 max-w-prose whitespace-pre-line text-[16px] leading-relaxed text-concrete-400">
               {service.intro}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

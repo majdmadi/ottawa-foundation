@@ -1,5 +1,6 @@
 import { site } from '@/lib/site';
 import { services } from '@/lib/services';
+import { areas } from '@/lib/areas';
 
 export default function sitemap() {
   const base = site.url.replace(/\/$/, '');
@@ -18,6 +19,12 @@ export default function sitemap() {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
+    })),
+    ...areas.map((a) => ({
+      url: `${base}/areas/${a.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     })),
   ];
 }

@@ -14,6 +14,11 @@ import CTA from '@/components/CTA';
 import { services } from '@/lib/services';
 import { site } from '@/lib/site';
 import { faqJsonLd, JsonLd } from '@/lib/seo';
+import { areaHref } from '@/lib/areas';
+
+export const metadata = {
+  alternates: { canonical: '/' },
+};
 
 const homeFaqs = [
   {
@@ -172,7 +177,7 @@ export default function HomePage() {
               dark
               eyebrow="Why choose us"
               title="Quality work. Fair price. In that order."
-              intro="97% of our projects are referrals. Word-of-mouth only happens when homeowners trust the diagnosis, respect the execution, and the invoice matches the written quote. We earn that repeatedly."
+              intro="Most of our work comes from referrals. Word-of-mouth only happens when homeowners trust the diagnosis, respect the execution, and the invoice matches the written quote. We earn that repeatedly."
             />
             <a href="#quote" className="btn-primary mt-8">
               Get a Detailed Quote
@@ -180,7 +185,7 @@ export default function HomePage() {
           </div>
           <dl className="grid gap-px overflow-hidden rounded-lg bg-white/10 sm:grid-cols-2">
             {[
-              ['OTTAWA SPECIALIST', "Fourteen years of local project history. We've seen Ottawa's soil profiles, clay behavior, and freeze-thaw damage patterns on thousands of foundations. This experience means faster diagnosis and more reliable solutions — the first time."],
+              ['OTTAWA SPECIALIST', `${site.yearsInBusiness}+ years of local project history. We know Ottawa's soil profiles, clay behaviour and freeze-thaw damage patterns. That experience means faster diagnosis and more reliable solutions — the first time.`],
               ['STRUCTURAL, NOT COSMETIC', "We diagnose the failure mechanism, not the water stain. Every repair addresses root cause: the crack's structural integrity, the seal's perimeter failure, or the drainage system's capacity. We don't do cosmetic patching."],
               ['TRANSPARENT, FIXED-PRICE QUOTES', "Every quote is itemized, in writing, before excavation begins. If conditions expose something unexpected, we stop work and present the new finding with revised pricing — then you decide, with full information. No surprises."],
               ['LOCAL OVERSIGHT, NOT FRANCHISE', "Owner-operated, based in Ottawa. The person who inspects your foundation is the same person on-site during execution — no supervisor visit from a regional office, no hand-offs to labor crews. Direct accountability."],
@@ -228,14 +233,16 @@ export default function HomePage() {
           </div>
           <ul className="flex flex-wrap gap-2.5">
             {site.serviceAreas.map((area) => (
-              <li
-                key={area}
-                className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-[15px] font-semibold text-white"
-              >
+              <li key={area}>
+                <Link
+                  href={areaHref(area) || '/#areas'}
+                  className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-[15px] font-semibold text-white hover:border-amber"
+                >
                 <svg viewBox="0 0 20 20" className="h-4 w-4 text-amber" fill="currentColor" aria-hidden="true">
                   <path d="M10 1.5a6 6 0 00-6 6c0 4.5 6 11 6 11s6-6.5 6-11a6 6 0 00-6-6zm0 8.2a2.2 2.2 0 110-4.4 2.2 2.2 0 010 4.4z" />
                 </svg>
                 {area}
+                </Link>
               </li>
             ))}
             <li className="rounded-full border border-dashed border-white/25 px-4 py-2.5 text-[14px] text-concrete-400">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from './Logo';
+import { areaHref } from '@/lib/areas';
 import { site, nav, legalNav } from '@/lib/site';
 import { services } from '@/lib/services';
 
@@ -41,7 +42,13 @@ export default function Footer() {
           </h2>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-[14px]">
             {site.serviceAreas.map((area) => (
-              <li key={area}>{area}</li>
+              <li key={area}>
+                {areaHref(area) ? (
+                  <Link href={areaHref(area)} className="hover:text-amber">{area}</Link>
+                ) : (
+                  area
+                )}
+              </li>
             ))}
           </ul>
         </div>

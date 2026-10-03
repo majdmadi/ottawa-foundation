@@ -6,6 +6,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import { services } from '@/lib/services';
 
 export const metadata = {
+  alternates: { canonical: '/services' },
   title: 'Services',
   description:
     'Foundation repair and waterproofing, concrete crack and surface repair, mold removal, and cutting new door and window openings — across Ottawa and the surrounding area.',

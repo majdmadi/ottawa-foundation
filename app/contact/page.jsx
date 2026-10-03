@@ -4,6 +4,7 @@ import ServiceAreas from '@/components/ServiceAreas';
 import { site } from '@/lib/site';
 
 export const metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact',
   description: `Get a free foundation, concrete or mold quote in Ottawa. Call ${site.phone} or send the form.`,
 };

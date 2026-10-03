@@ -6,6 +6,7 @@ import CTA from '@/components/CTA';
 import { site } from '@/lib/site';
 
 export const metadata = {
+  alternates: { canonical: '/about' },
   title: 'About',
   description: `${site.yearsInBusiness} years repairing foundations, concrete and mold problems in Ottawa and the surrounding area.`,
 };

@@ -5,6 +5,7 @@ import CTA from '@/components/CTA';
 import { site } from '@/lib/site';
 
 export const metadata = {
+  alternates: { canonical: '/booking' },
   title: 'Book a visit',
   description:
     'Book a free on-site foundation, concrete or mold assessment in Ottawa. Pick a day and time that suits you.',

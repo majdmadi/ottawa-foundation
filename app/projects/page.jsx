@@ -5,6 +5,7 @@ import CTA from '@/components/CTA';
 import ServiceAreas from '@/components/ServiceAreas';
 
 export const metadata = {
+  alternates: { canonical: '/projects' },
   title: 'Projects',
   description:
     'Before-and-after foundation, concrete and mold jobs across Ottawa, Kanata, Orléans, Barrhaven and the surrounding area.',
