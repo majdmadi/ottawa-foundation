@@ -17,7 +17,6 @@ export function trackEvent(name, params = {}) {
  * engagement time are collected automatically (including client-side route
  * changes, via GA4 enhanced measurement). On top of that we record:
  *   - phone_call_click   — any tel: link
- *   - whatsapp_click     — any WhatsApp link
  *   - generate_lead      — fired by QuoteForm on a successful submission
  */
 export default function Analytics() {
@@ -28,8 +27,6 @@ export default function Analytics() {
       const href = link.getAttribute('href') || '';
       if (href.startsWith('tel:')) {
         trackEvent('phone_call_click', { link_url: href, page_path: window.location.pathname });
-      } else if (/wa\.me|whatsapp/i.test(href)) {
-        trackEvent('whatsapp_click', { link_url: href, page_path: window.location.pathname });
       }
     }
     document.addEventListener('click', onClick);

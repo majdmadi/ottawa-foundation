@@ -57,7 +57,7 @@ export default function QuoteForm({ variant = 'quote', className = '' }) {
         .flatMap((f) => Array.from(f.files ?? []))
         .reduce((sum, file) => sum + file.size, 0);
       if (total > MAX_BYTES) {
-        setFileError('Photos add up to more than 8 MB. Use smaller photos, or send them on WhatsApp instead.');
+        setFileError('Photos add up to more than 8 MB. Use smaller photos, or email them to us instead.');
         return false;
       }
     }
@@ -289,8 +289,8 @@ export default function QuoteForm({ variant = 'quote', className = '' }) {
         </div>
         <fieldset>
           <legend className="label">Best way to reach you</legend>
-          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-            {['Call', 'Text', 'Email', 'WhatsApp'].map((m, i) => (
+          <div className="grid grid-cols-3 gap-2.5">
+            {['Call', 'Text', 'Email'].map((m, i) => (
               <label key={m} className={`${optionCard} justify-center !px-3`}>
                 <input type="radio" name="contact_pref" value={m} defaultChecked={i === 0} className="sr-only" />
                 {m}
@@ -325,7 +325,7 @@ export default function QuoteForm({ variant = 'quote', className = '' }) {
 
       {status === 'error' && (
         <p role="alert" className="mt-6 rounded-md border border-red-300 bg-red-50 p-4 text-[14px] text-red-800">
-          That did not send. Please call or WhatsApp{' '}
+          That did not send. Please call{' '}
           <a href={site.phoneHref} className="font-semibold underline">
             {site.phone}
           </a>{' '}

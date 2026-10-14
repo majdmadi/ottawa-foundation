@@ -91,7 +91,7 @@ export default function HomePage() {
                 'Free on-site assessment',
                 'Written, itemised quotes',
                 'Fully insured',
-                'Photos welcome on WhatsApp',
+                'Reply within one business day',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 text-amber" fill="currentColor" aria-hidden="true">
@@ -285,11 +285,10 @@ export default function HomePage() {
                 {site.phone}
               </a>
               <p className="mt-2 text-[14px] text-ink-700">
-                Or send photos on{' '}
-                <a href={site.whatsappQuote} className="font-semibold text-amber-deep underline" target="_blank" rel="noopener noreferrer">
-                  WhatsApp
+                Or email{' '}
+                <a href={`mailto:${site.email}`} className="font-semibold text-amber-deep underline break-all">
+                  {site.email}
                 </a>
-                .
               </p>
             </div>
           </div>

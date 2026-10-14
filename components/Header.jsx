@@ -21,8 +21,8 @@ export default function Header() {
           </p>
           <div className="flex items-center gap-5">
             <span className="text-concrete-300">Free on-site assessment · Written quotes</span>
-            <a href={site.whatsappQuote} target="_blank" rel="noopener noreferrer" className="font-semibold text-concrete-200 hover:text-amber">
-              WhatsApp us
+            <a href={site.phoneHref} className="font-semibold text-concrete-200 hover:text-amber">
+              Call {site.phone}
             </a>
           </div>
         </div>

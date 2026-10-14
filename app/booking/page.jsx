@@ -39,14 +39,6 @@ export default function BookingPage() {
                 Water coming in right now? Call — do not wait on a form. An emergency gets moved
                 to the front of the list.
               </p>
-              <a
-                href={site.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost-light mt-5 w-full"
-              >
-                Message on WhatsApp
-              </a>
             </div>
 
             <div className="card">

@@ -3,7 +3,6 @@ import { Inter, Barlow_Condensed } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileCallBar from '@/components/MobileCallBar';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { site } from '@/lib/site';
 import { localBusinessJsonLd, JsonLd } from '@/lib/seo';
 import Analytics from '@/components/Analytics';
@@ -57,7 +56,6 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <MobileCallBar />
-        <WhatsAppButton />
         <JsonLd data={localBusinessJsonLd()} />
         <Analytics />
       </body>

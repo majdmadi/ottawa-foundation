@@ -1,7 +1,7 @@
 const steps = [
   {
     title: 'You call or send the form',
-    body: 'Tell us what you are seeing. If you can send a photo on WhatsApp, do — it often tells us more than a paragraph.',
+    body: 'Tell us what you are seeing. If you can attach a photo to the form, do — it often tells us more than a paragraph.',
   },
   {
     title: 'We come and look',

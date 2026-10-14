@@ -21,7 +21,7 @@ export default function ContactPage() {
             </p>
             <h1 className="mt-5 h1 text-white">Get a free quote</h1>
             <p className="mt-5 max-w-prose text-[16.5px] leading-relaxed text-concrete-400">
-              Call, WhatsApp a photo, or fill in the form. However it reaches us, you get a person —
+              Call, email, or fill in the form. However it reaches us, you get a person —
               not a call centre.
             </p>
           </div>
