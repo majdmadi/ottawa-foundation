@@ -121,6 +121,9 @@ export default function HomePage() {
               <a href={site.phoneHref} className="mt-3 block font-display text-[26px] font-bold leading-none text-white hover:text-amber">
                 {site.phone}
               </a>
+              <a href={site.phone2Href} className="mt-1.5 block font-display text-[26px] font-bold leading-none text-white hover:text-amber">
+                {site.phone2}
+              </a>
             </div>
           </div>
         </div>
@@ -283,6 +286,9 @@ export default function HomePage() {
               <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-concrete-500">Rather talk?</p>
               <a href={site.phoneHref} className="mt-1 block font-display text-[34px] font-bold leading-none text-ink-950 hover:text-amber-deep">
                 {site.phone}
+              </a>
+              <a href={site.phone2Href} className="mt-2 block font-display text-[34px] font-bold leading-none text-ink-950 hover:text-amber-deep">
+                {site.phone2}
               </a>
               <p className="mt-2 text-[14px] text-ink-700">
                 Or email{' '}

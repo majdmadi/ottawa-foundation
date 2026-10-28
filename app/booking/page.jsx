@@ -35,6 +35,9 @@ export default function BookingPage() {
               <a href={site.phoneHref} className="mt-4 block font-display text-[32px] font-bold leading-none text-amber">
                 {site.phone}
               </a>
+              <a href={site.phone2Href} className="mt-2 block font-display text-[32px] font-bold leading-none text-amber">
+                {site.phone2}
+              </a>
               <p className="mt-4 text-[14.5px] leading-relaxed">
                 Water coming in right now? Call — do not wait on a form. An emergency gets moved
                 to the front of the list.

@@ -26,10 +26,11 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <a href={site.phoneHref} className="rounded-lg border border-white/12 bg-ink-900 p-5 transition-colors hover:border-amber">
+            <div className="rounded-lg border border-white/12 bg-ink-900 p-5">
               <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-concrete-500">Phone</span>
-              <span className="mt-2 block font-display text-[24px] font-bold text-amber">{site.phone}</span>
-            </a>
+              <a href={site.phoneHref} className="mt-2 block font-display text-[24px] font-bold text-amber hover:text-white">{site.phone}</a>
+              <a href={site.phone2Href} className="mt-1 block font-display text-[24px] font-bold text-amber hover:text-white">{site.phone2}</a>
+            </div>
             <a href={`mailto:${site.email}`} className="rounded-lg border border-white/12 bg-ink-900 p-5 transition-colors hover:border-amber">
               <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-concrete-500">Email</span>
               <span className="mt-2 block break-all text-[15px] font-medium text-white">{site.email}</span>

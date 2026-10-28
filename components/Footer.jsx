@@ -60,6 +60,9 @@ export default function Footer() {
           <a href={site.phoneHref} className="block font-display text-2xl font-bold text-amber">
             {site.phone}
           </a>
+          <a href={site.phone2Href} className="mt-1 block font-display text-2xl font-bold text-amber">
+            {site.phone2}
+          </a>
           <a href={`mailto:${site.email}`} className="mt-2 block break-all text-[14px] hover:text-amber">
             {site.email}
           </a>
