@@ -9,6 +9,7 @@ import ServiceAreas from '@/components/ServiceAreas';
 import { services, serviceBySlug } from '@/lib/services';
 import { site } from '@/lib/site';
 import { faqJsonLd, JsonLd } from '@/lib/seo';
+import CallButton from '@/components/CallButton';
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -49,7 +50,7 @@ export default async function ServicePage({ params }) {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn-primary">Get a free quote</Link>
-              <a href={site.phoneHref} className="btn-ghost-light">Call {site.phone}</a>
+              <CallButton className="btn-ghost-light">Call us</CallButton>
             </div>
           </div>
           <Photo

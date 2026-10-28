@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { site } from '@/lib/site';
+import CallButton from './CallButton';
 
 export default function CTA({
   title = 'Get it looked at before the next freeze',
@@ -14,9 +14,9 @@ export default function CTA({
           <p className="mt-4 max-w-prose text-[16px] leading-relaxed text-concrete-400">{body}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-          <a href={site.phoneHref} className="btn-primary flex-1">
-            Call {site.phone}
-          </a>
+          <CallButton className="btn-primary flex-1">
+            Call us
+          </CallButton>
           <Link href="/contact" className="btn-ghost-light flex-1">
             Request a quote
           </Link>

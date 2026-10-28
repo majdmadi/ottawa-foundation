@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from './Logo';
+import CallButton from './CallButton';
 import { site, nav } from '@/lib/site';
 
 export default function Header() {
@@ -21,9 +22,9 @@ export default function Header() {
           </p>
           <div className="flex items-center gap-5">
             <span className="text-concrete-300">Free on-site assessment · Written quotes</span>
-            <a href={site.phoneHref} className="font-semibold text-concrete-200 hover:text-amber">
-              Call {site.phone}
-            </a>
+            <CallButton className="font-semibold text-concrete-200 hover:text-amber">
+              Call {site.phone} · {site.phone2}
+            </CallButton>
           </div>
         </div>
       </div>
@@ -50,24 +51,21 @@ export default function Header() {
               </Link>
             );
           })}
-          <a href={site.phoneHref} className="btn-primary !px-4">
+          <CallButton className="btn-primary !px-4">
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.6a1 1 0 01-.25 1z" />
             </svg>
             Call Now
-            <span className="sr-only">: {site.phone}</span>
-          </a>
+            <span className="sr-only">: {site.phone} or {site.phone2}</span>
+          </CallButton>
         </nav>
 
-        <a
-          href={site.phoneHref}
-          className="ml-auto mr-2 inline-flex h-11 w-11 items-center justify-center rounded-md bg-amber text-ink-950 lg:hidden"
-        >
-          <span className="sr-only">Call {site.phone}</span>
+        <CallButton className="ml-auto mr-2 inline-flex h-11 w-11 items-center justify-center rounded-md bg-amber text-ink-950 lg:hidden">
+          <span className="sr-only">Call us</span>
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
             <path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.6a1 1 0 01-.25 1z" />
           </svg>
-        </a>
+        </CallButton>
 
         <button
           type="button"
@@ -99,9 +97,9 @@ export default function Header() {
             ))}
           </ul>
           <div className="container-x pb-5">
-            <a href={site.phoneHref} className="btn-primary w-full">
-              Call {site.phone}
-            </a>
+            <CallButton className="btn-primary w-full">
+              Call us
+            </CallButton>
           </div>
         </nav>
       )}

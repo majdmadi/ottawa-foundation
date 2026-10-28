@@ -3,6 +3,7 @@ import { Inter, Barlow_Condensed } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileCallBar from '@/components/MobileCallBar';
+import CallDialog from '@/components/CallDialog';
 import { site } from '@/lib/site';
 import { localBusinessJsonLd, JsonLd } from '@/lib/seo';
 import Analytics from '@/components/Analytics';
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <MobileCallBar />
+        <CallDialog />
         <JsonLd data={localBusinessJsonLd()} />
         <Analytics />
       </body>

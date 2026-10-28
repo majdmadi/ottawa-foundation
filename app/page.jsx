@@ -10,6 +10,7 @@ import { projects } from '@/lib/projects';
 import Reviews from '@/components/Reviews';
 import FAQ from '@/components/FAQ';
 import QuoteForm from '@/components/QuoteForm';
+import CallButton from '@/components/CallButton';
 import CTA from '@/components/CTA';
 import { services } from '@/lib/services';
 import { site } from '@/lib/site';
@@ -81,9 +82,9 @@ export default function HomePage() {
                   <path d="M11.3 4.3l5 5a1 1 0 010 1.4l-5 5-1.4-1.4 3.3-3.3H3v-2h10.2L9.9 5.7z" />
                 </svg>
               </a>
-              <a href={site.phoneHref} className="btn-ghost-light !py-4 !text-[15px]">
-                Call {site.phone}
-              </a>
+              <CallButton className="btn-ghost-light !py-4 !text-[15px]">
+                Call us
+              </CallButton>
             </div>
 
             <ul className="mt-9 grid gap-x-6 gap-y-2.5 text-[14px] text-concrete-300 sm:grid-cols-2">
@@ -249,7 +250,7 @@ export default function HomePage() {
               </li>
             ))}
             <li className="rounded-full border border-dashed border-white/25 px-4 py-2.5 text-[14px] text-concrete-400">
-              Not listed? <a href={site.phoneHref} className="font-semibold text-amber underline">Call and ask</a>
+              Not listed? <CallButton className="font-semibold text-amber underline">Call and ask</CallButton>
             </li>
           </ul>
         </div>

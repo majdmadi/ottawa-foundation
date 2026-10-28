@@ -8,6 +8,7 @@ import { areas, areaBySlug } from '@/lib/areas';
 import { services } from '@/lib/services';
 import { site } from '@/lib/site';
 import { JsonLd } from '@/lib/seo';
+import CallButton from '@/components/CallButton';
 
 export function generateStaticParams() {
   return areas.map((a) => ({ slug: a.slug }));
@@ -57,7 +58,7 @@ export default async function AreaPage({ params }) {
           <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-concrete-300">{area.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#quote" className="btn-primary">Get a free quote in {area.name}</a>
-            <a href={site.phoneHref} className="btn-ghost-light">Call {site.phone}</a>
+            <CallButton className="btn-ghost-light">Call us</CallButton>
           </div>
         </div>
       </section>

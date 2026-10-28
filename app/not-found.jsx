@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { site } from '@/lib/site';
+import CallButton from '@/components/CallButton';
 
 export default function NotFound() {
   return (
@@ -11,7 +12,7 @@ export default function NotFound() {
       </p>
       <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
         <Link href="/services" className="btn-primary">Our services</Link>
-        <a href={site.phoneHref} className="btn-ghost">Call {site.phone}</a>
+        <CallButton className="btn-ghost">Call us</CallButton>
       </div>
     </div>
   );
